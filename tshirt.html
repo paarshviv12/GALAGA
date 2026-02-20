@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic T-Shirt | GALAGA SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <style>
+        .product-container {
+            display: flex;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            align-items: center;
+        }
+
+        .product-image-side {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111;
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .product-image-side img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+        }
+
+        .product-details-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-title {
+            font-size: 24px;
+            color: #00e5ff;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+            text-transform: uppercase;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .product-options {
+            margin-top: 10px;
+        }
+
+        .options-label {
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: block;
+            color: #ccc;
+        }
+
+        .size-selector {
+            display: flex;
+            gap: 10px;
+        }
+
+        .size-btn {
+            background: #222;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .size-btn:hover,
+        .size-btn.active {
+            border-color: #00e5ff;
+            color: #00e5ff;
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+        }
+
+        .product-actions {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        @media (max-width: 900px) {
+            .product-container {
+                flex-direction: column;
+                gap: 30px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="shop-page">
+    <div class="video-bg-container">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="Galaga (1981) - Gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <img src="doodle.png" class="doodle-fixed left" alt="left doodle">
+    <img src="doodle2.png" class="doodle-fixed right" alt="right doodle">
+
+    <nav class="nav-bar">
+        <a href="index.html" class="logo-container">
+            <img src="galaga_logo.png" alt="Galaga Logo">
+        </a>
+        <div class="nav-links">
+            <a href="history.html">HISTORY</a>
+            <a href="shop.html">SHOP</a>
+            <a href="game.html">GAME</a>
+        </div>
+    </nav>
+
+    <main class="home-container" style="padding: 160px 20px 60px 20px; height: auto; overflow: visible;">
+        <div class="product-container">
+            <div class="product-image-side">
+                <img src="tshirt.jpg" alt="Galaga Classic T-Shirt">
+            </div>
+            <div class="product-details-side">
+                <h1 class="product-title">Classic T-Shirt</h1>
+                <p class="product-price">₹250.00</p>
+                <div class="product-description">
+                    Relive the arcade gold age with this premium Galaga T-shirt. Featuring the iconic logo and a
+                    comfortable fit, it's perfect for pilots who want to show off their retro gaming status.
+                </div>
+
+                <div class="product-options">
+                    <span class="options-label">SELECT SIZE:</span>
+                    <div class="size-selector">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn active">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button class="cta-button">ADD TO CART</button>
+                    <a href="shop.html" class="cta-button"
+                        style="background: transparent; border: 1px solid #00e5ff; color: #00e5ff;">BACK TO SHOP</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GALAGA Fan Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

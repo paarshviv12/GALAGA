@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALAGA | Arcade Shooter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page">
+    <div class="video-bg-container">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="Galaga (1981) - Gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <script>
+        const unmuteVideo = function () {
+            const video = document.getElementById('bg-video');
+            if (video) {
+                video.muted = false;
+                video.volume = 1.0;
+                video.play().catch(e => console.error("Playback failed:", e));
+                console.log('Video unmuted and playing');
+            }
+        };
+
+        ['click', 'keydown', 'touchstart', 'mousedown'].forEach(event => {
+            document.addEventListener(event, unmuteVideo, { once: true });
+        });
+    </script>
+
+    <img src="doodle.png" class="doodle-fixed left" alt="left doodle">
+    <img src="doodle2.png" class="doodle-fixed right" alt="right doodle">
+
+    <nav class="nav-bar">
+        <a href="index.html" class="logo-container">
+            <img src="galaga_logo.png" alt="Galaga Logo">
+        </a>
+        <div class="nav-links">
+            <a href="history.html">HISTORY</a>
+            <a href="shop.html">SHOP</a>
+            <a href="game.html">GAME</a>
+        </div>
+    </nav>
+
+    <div class="hero-container">
+
+        <div class="hero-slide active" style="background-image: url('news1.jpg');">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">A New Galaga World Record</h1>
+                    <p class="hero-desc">A legendary score pushes Galaga to new heights.</p>
+                    <div class="hero-actions">
+                        <a class="cta-button" href="https://www.oldschoolgamermagazine.com/new-galaga-world-record/"
+                            target="_blank">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" style="background-image: url('news2.jpg');">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">The Galaga No-Fire Cheat Mystery</h1>
+                    <p class="hero-desc">A strange exploit that confused players for decades.</p>
+                    <div class="hero-actions">
+                        <a class="cta-button"
+                            href="https://jasoneckert.github.io/myblog/the-galaga-no-fire-cheat-mystery/"
+                            target="_blank">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-slide" style="background-image: url('news3.jpg');">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Galaga Gets an Origin Story</h1>
+                    <p class="hero-desc">The iconic arcade shooter finally gets lore.</p>
+                    <div class="hero-actions">
+                        <a class="cta-button"
+                            href="https://www.oldschoolgamermagazine.com/galaga-is-finally-getting-an-origin-story/"
+                            target="_blank">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+        </div>
+    </div>
+
+
+    <section class="home-section">
+        <div class="section-header">
+            <h2 class="section-title">Main Enemies</h2>
+        </div>
+        <div class="scroll-container">
+            <div class="enemy-card"><img src="zarkos.png">
+                <h3>Zakos</h3>
+            </div>
+            <div class="enemy-card"><img src="goeis.png">
+                <h3>Goeis</h3>
+            </div>
+            <div class="enemy-card"><img src="boss_galaga.png">
+                <h3>Boss Galagas</h3>
+            </div>
+            <div class="enemy-card"><img src="captured_fighter.png">
+                <h3>Captured Fighter</h3>
+            </div>
+        </div>
+    </section>
+
+    <div class="enemies-and-arcade">
+        <div class="enemies-area">
+            <section class="home-section">
+                <div class="section-header">
+                    <h2 class="section-title">Transformed Enemies</h2>
+                </div>
+                <div class="scroll-container">
+                    <div class="enemy-card"><img src="ogawamushi.png">
+                        <h3>Ogawamushis</h3>
+                    </div>
+                    <div class="enemy-card"><img src="eis.png">
+                        <h3>Eis</h3>
+                    </div>
+                    <div class="enemy-card"><img src="galbosses.png">
+                        <h3>Galbosses</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home-section">
+                <div class="section-header">
+                    <h2 class="section-title">Special Enemies</h2>
+                </div>
+                <div class="scroll-container">
+                    <div class="enemy-card"><img src="tonbo.png">
+                        <h3>Tonbo</h3>
+                    </div>
+                    <div class="enemy-card"><img src="momiji.png">
+                        <h3>Momiji</h3>
+                    </div>
+                    <div class="enemy-card"><img src="spaceship.png">
+                        <h3>Spaceship</h3>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="arcade-panel">
+            <a href="https://www.retrogames.cz/play_018-NES.php" target="_blank" class="arcade-card">
+                <span class="tap-popup">Tap to Play</span>
+                <img src="Arcade machine.png" alt="Arcade Machine">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GALAGA Fan Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

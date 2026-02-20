@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY | GALAGA Arcade Shooter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="history-page">
+    <div class="video-bg-container">
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="Galaga (1981) - Gameplay.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <script>
+        const unmuteVideo = function () {
+            const video = document.getElementById('bg-video');
+            if (video) {
+                video.muted = false;
+                video.volume = 1.0;
+                video.play().catch(e => console.error("Playback failed:", e));
+            }
+        };
+        ['click', 'keydown', 'touchstart', 'mousedown'].forEach(event => {
+            document.addEventListener(event, unmuteVideo, { once: true });
+        });
+    </script>
+
+    <img src="doodle.png" class="doodle-fixed left" alt="left doodle">
+    <img src="doodle2.png" class="doodle-fixed right" alt="right doodle">
+
+    <nav class="nav-bar">
+        <a href="index.html" class="logo-container">
+            <img src="galaga_logo.png" alt="Galaga Logo">
+        </a>
+        <div class="nav-links">
+            <a href="history.html">HISTORY</a>
+            <a href="shop.html">SHOP</a>
+            <a href="game.html">GAME</a>
+        </div>
+    </nav>
+
+    <main class="home-container" style="padding: 160px 60px 60px 60px; height: auto; overflow: visible;">
+        <section class="home-section"
+            style="background: rgba(0, 0, 0, 0.7); border-radius: 20px; border: 1px solid rgba(0, 229, 255, 0.3); backdrop-filter: blur(10px);">
+            <div class="section-header">
+                <h2 class="section-title">The Legacy of Galaga</h2>
+            </div>
+            <div class="hero-content" style="padding: 20px 0; max-width: 1000px;">
+                <p class="hero-desc">
+                    Released in 1981 by Namco, Galaga is the legendary sequel to Galaxian and one of the most successful
+                    arcade games of all time. It took the fixed-shooter formula and elevated it with new mechanics like
+                    the "Tractor Beam," where enemies can capture the player's ship.
+                </p>
+
+                <h3 style="color: #00e5ff; margin-top: 40px; margin-bottom: 20px; font-size: 18px;">A Revolution in
+                    Gameplay</h3>
+                <p class="hero-desc">
+                    Galaga introduced the concept of "Dual Fighter" mode. If you successfully rescue your captured ship,
+                    you can fly two ships simultaneously, doubling your firepower. This risk-versus-reward mechanic was
+                    groundbreaking and remains a fan-favorite feature today.
+                </p>
+
+                <h3 style="color: #00e5ff; margin-top: 40px; margin-bottom: 20px; font-size: 18px;">Cultural Impact</h3>
+                <p class="hero-desc">
+                    From its iconic "challenging stages" to the distinct sound effects and enemy formations, Galaga has
+                    cemented itself in pop culture. It has appeared in numerous movies, TV shows, and continues to be
+                    ported to every major gaming console, proving that its simple yet addictive gameplay is truly
+                    timeless.
+                </p>
+
+                <div style="margin-top: 60px;">
+                    <a href="index.html" class="cta-button">Back to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GALAGA Fan Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

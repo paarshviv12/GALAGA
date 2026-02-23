@@ -58,5 +58,5 @@ The website is designed with a retro-modern aesthetic, featuring a dynamic video
 
 <img src="https://media1.tenor.com/m/xhsBYXADrCcAAAAC/gradius-gradius-3.gif" alt="Galaga Bottom Gif" width="100%" />
 
-*Made with ❤️ by the Galaga Fan Community.*
+*Thank You*
 </div>
